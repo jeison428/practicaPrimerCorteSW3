@@ -37,7 +37,7 @@ $(document).ready(function(){
             $(".txt_codigo").load("archivosPHP/obtenerTarea.php?codigo="+codigo);
             stateButton(true);
             $('.infoTareas').show();
-            buscaMaterias(codigo);
+            buscaTarea(codigo);
         }else{
             alert("digita tu codigo, recuerda que debe ser un numero");
         }
@@ -74,15 +74,15 @@ window.onload = function load(){
     stateButton(false);
 }
 
-function buscaMaterias(codigo){
+function buscaTarea(codigo){
 
-    function getMaterias(codigo){
+    function getTarea(codigo){
         $(document).ready(function(){
             jQuery.getJSON("archivosJson/"+codigo+".json", function(data){
                 for (let i = 0; i < data.length; i++) {
-                    var materias = data[i];
-                    var datos_materia = Object.values(materias);
-                    organizaMaterias(datos_materia);
+                    var tareas = data[i];
+                    var datos_tarea = Object.values(tareas);
+                    organizaMaterias(datos_tarea);
                 }
                 // borramos el primer div con id 'aclonar' 
                 var elem = document.getElementById("aclonar");
@@ -93,9 +93,9 @@ function buscaMaterias(codigo){
     
     function getEstados(codigo){
         $(document).ready(function(){
-            jQuery.getJSON("archivosJson/"+codigo+".json", function(estadoMateria){
-                for (let i = 0; i < estadoMateria.length; i++) {
-                    var estado = estadoMateria[i];
+            jQuery.getJSON("archivosJson/"+codigo+".json", function(estadoTarea){
+                for (let i = 0; i < estadoTarea.length; i++) {
+                    var estado = estadoTarea[i];
                     info_estado = Object.values(estado);
     
                     if(info_estado[2] == true){
@@ -107,34 +107,34 @@ function buscaMaterias(codigo){
         }); 
     } 
     
-    $.when(getMaterias(codigo)).then(getEstados(codigo));
+    $.when(getTarea(codigo)).then(getEstados(codigo));
 }
 
-function organizaMaterias(datos_materia){
+function organizaMaterias(datos_tarea){
     var el = document.querySelector('.tareas');
     var clone = el.cloneNode(false);
-    clone.id = "materia_"+datos_materia[0];
+    clone.id = "materia_"+datos_tarea[0];
     clone.addEventListener('click', cambiaEstado); 
     
-    var materia = document.createElement("p");
-    var m =  document.createTextNode(datos_materia[0]);
-    materia.appendChild(m);
-    materia.id = "materia_"+datos_materia[0];
+    var tarea = document.createElement("p");
+    var m =  document.createTextNode(datos_tarea[0]);
+    tarea.appendChild(m);
+    tarea.id = "materia_"+datos_tarea[0];
     
-    var credito = document.createElement("p");
-    var c = document.createTextNode(datos_materia[1]);
-    credito.appendChild(c);
-    credito.id = "creditos"; 
+    var fecha = document.createElement("p");
+    var c = document.createTextNode(datos_tarea[1]);
+    fecha.appendChild(c);
+    fecha.id = "creditos"; 
     
-    clone.appendChild(materia);
-    clone.appendChild(credito);
+    clone.appendChild(tarea);
+    clone.appendChild(fecha);
     document.getElementById("tareas").appendChild(clone);
     
 }
 
 function cambiaEstado(){
-    var idMateria = event.target.id;
-    idMateria = idMateria.substring(8);
+    var nomTarea = event.target.id;
+    nomTarea = nomTarea.substring(8);
     var codigo = document.getElementById("codigo").value;
     if(this.style.backgroundColor == 'gray'){
         this.style.backgroundColor = '#43A047';
@@ -143,13 +143,11 @@ function cambiaEstado(){
         this.style.backgroundColor = 'gray';
         estado = true; 
     }
-    //var datos = {nombreTarea: idMateria, codigoUsuario: codigo, state: estado};
-    /* enviamos la actualizacion al servidor */
     $.ajax({
         type: "POST",   
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         url: "archivosPHP/actualizarTarea.php",
-        data: {nombreTarea: idMateria, codigoUsuario: codigo, state: estado} ,
+        data: {nombreTarea: nomTarea, codigoUsuario: codigo, state: estado} ,
         complete: function (result) {
 
         },
