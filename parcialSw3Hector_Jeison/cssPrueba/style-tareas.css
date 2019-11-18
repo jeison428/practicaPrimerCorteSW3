@@ -1,0 +1,129 @@
+body{
+    background: linear-gradient(90deg,  rgb(233, 41, 41) 20%,rgb(241, 111, 35) 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff670f', endColorstr='#ff670f',GradientType=1 );
+    
+}
+
+.informacion{
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    position: relative; 
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+h2, h3, p, img{
+    color: black;
+    text-align: center; 
+}
+
+.infoTareas {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    margin: 0 auto 20px;
+    padding: 45px;
+    background-image: url("https://i0.wp.com/tiempodenegocios.com/wp-content/uploads/2017/10/lista-de-tareas-700x406.jpg");
+    background-size: 800px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.userCodigo{
+    background-color: black;
+    opacity: 0.85;
+}
+
+.userCodigo h2, p{
+    color: white;
+}
+
+.btn-newBusqueda #btn_nuevaBusqueda{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(10, 7, 209);
+    width: 40%;
+    border: 0;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.info_centrado input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.info_centrado #btn_consultar {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.info_centrado button:hover,.info_centrado button:active,.info_centrado button:focus {
+    background: #43A047;
+}
+
+#formulario{
+    background-image: url("https://i0.wp.com/tiempodenegocios.com/wp-content/uploads/2017/10/lista-de-tareas-700x406.jpg");
+    background-size: 450px;
+}
+
+#tareas{
+    background-image: url("http://agrega.juntadeandalucia.es/repositorio/26022013/7b/es-an_2013022613_9142223/recursos/tareas.png");
+}
+
+.tareasReg {
+    background-color: black;
+    opacity: 0.9;
+    width: 60%;
+    margin: 0 auto 20px;
+}
+
+.tareasReg h3{
+    color: white;
+}
+.info_formulario{
+    background-color: black;
+    opacity: 0.9;
+}
+
+.info_formulario h3, label{
+    color: white;
+}
+.btn-guardar #btn_guardar{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(255, 0, 0);
+    width: 30%;
+    border: 0;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}

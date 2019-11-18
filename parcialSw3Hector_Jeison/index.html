@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="archivosJson/organizaMaterias.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Parcial 1</title>
+    
+    <div class="info_centrado">
+        <h2>APLICACION DE CONTROL DE TAREAS</h2>
+        <h3>Bienvenido al control de Tareas.</h3>
+        <p>En esta pagina vas a poder llevar un control de tus tareas...</p>
+        <p><b>Para continuar ingresa tu Codigo de Usuario</b></p>
+        <div class="codigo_user">
+            <input type="text" placeholder="Codigo" name="codigo" id="codigo">
+        </div>
+        <br><p></p>
+        <button id="btn_consultar" type="submit" >Ingresar</button>
+        <button id="btn_nuevaBusqueda" type="submit">Nueva Busqueda</button>
+    </div>
+    
+    <div id="info-tareas" class="infoTareas">
+        <div class="userCodigo">
+            <p>Su codigo es: <span class="txt_codigo" id="txtCodigo"></span></p>
+            <div class="guia">
+                <h2>Estados de la Tarea</h2>
+                <div class="color-green"><p> SIN REALIZAR</p></div>
+                <div class="color-gray"><p>REALIZADA</p></div>
+                <p>Hacer click sobre cada tarea para cambiar su estado...</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--<div id="info_data">
+        <div id="tareas" class="informacion">
+            <div class="tareasReg">
+                <h3> Tareas registradas </h3>
+                <div class="tarea">
+                    
+                </div>
+            </div>
+            
+        </div>-->
+
+    <div id="info_data">
+        <div id="tareas" class="informacion">
+            <div class="tareasReg">
+                <h3> Tareas registradas </h3>
+                
+            </div>
+            <div id="aclonar" class="tareas"></div>
+        </div>
+
+        <div id="formulario" class="informacion">
+            <div class="info_formulario">
+                <h3>Formulario Nueva Tarea</h3>
+                <form>
+                    <label>Nombre: </label>
+                    <div class="codigo_user">
+                        <input type="text" placeholder="Nombre de la Tarea" name="nomTarea" id="nomTarea">
+                    </div>
+                    <p></p>
+                    <label></br>Codigo: </label>
+                    <div class="codigo_user">
+                        <input type="text" placeholder="Codigo de Usuario" name="codUser" id="codUser">
+                    </div>
+                </form>
+                <p></p>
+            </div>
+            <div class="btn-guardar">
+                <button id="btn_guardar" type="submit" value="enviar"> Guardar</button>
+            </div>
+        </div>
+    </div>
+</head>
+<body>    
+</body>
+</html>

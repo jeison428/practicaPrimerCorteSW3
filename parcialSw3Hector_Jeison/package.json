@@ -1,0 +1,25 @@
+{
+  "name": "parcial1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dardila11/IS_Parcial1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dardila11/IS_Parcial1/issues"
+  },
+  "homepage": "https://github.com/Dardila11/IS_Parcial1#readme",
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "jquery": "^3.4.1",
+    "requirejs": "^2.3.6"
+  }
+}
