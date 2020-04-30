@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Dardila11/IS_Parcial1#readme",
   "dependencies": {
     "@types/jquery": "^3.3.29",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "requirejs": "^2.3.6"
   }
 }
